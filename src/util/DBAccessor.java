@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
+import util.DBUtil;
 
 /**
  * Classe d'utilitat connectora amb una BD preestablerta.
@@ -16,9 +17,9 @@ import java.util.Properties;
 public class DBAccessor {
     
     // Propietats del connector JDBC (per connectarse a una BD han d'estar a un fitxer *.properties)
-    private static final String JDBC_URL = "jdbc.drivers";
-    private static final String JDBC_USER = "jdbc.drivers";
-    private static final String JDBC_PASSWD = "jdbc.drivers";
+    private static final String JDBC_URL = "jdbc.url";
+    private static final String JDBC_USER = "jdbc.user";
+    private static final String JDBC_PASSWD = "jdbc.password";
     private static final String JDBC_DRIVERS = "jdbc.drivers";
     private static final String PROPS_FILE = "/home/mor/Documentos/m3/ExM3UF6/src/util/database.properties";
     
@@ -36,7 +37,7 @@ public class DBAccessor {
         props.load(in); // carrega el fitxer a l'objecte Properties
         in.close(); // tanca la connexió amb el fitxer
 
-        // AGAFA LES PROPIETATS DEL FITXER *.properties I LES GUARDA A VARIABLES STRING
+        // AGAFA LES PROPIETATS DEL FITXER *.properties I LES GUARDA EN STRINGS
         String drivers = props.getProperty(JDBC_DRIVERS);
         if (!DBUtil.isNull(drivers))
             System.setProperty(JDBC_DRIVERS, drivers);

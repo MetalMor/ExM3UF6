@@ -1,13 +1,11 @@
 package prova;
 
+import util.DBAccessor;
 import java.sql.Connection;
 import com.mysql.jdbc.Statement;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import util.DBAccessor;
 
 /**
  * Classe prova de connexió amb una BD preestablerta.
@@ -30,8 +28,8 @@ public class Prova {
     }
     
     public static void executarTest() throws SQLException, IOException {
+        
         Connection conn = DBAccessor.getConnection();
-
 
         try {
             Statement stat = (Statement) conn.createStatement();

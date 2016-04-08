@@ -1,4 +1,4 @@
-package util;
+package jdbc.util;
 
 import java.sql.Connection;
 import java.io.FileInputStream;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
-import util.DBUtil;
+import jdbc.util.DBUtil;
 
 /**
  * Classe d'utilitat connectora amb una BD preestablerta.

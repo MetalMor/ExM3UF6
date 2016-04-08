@@ -1,6 +1,6 @@
-package prova;
+package jdbc;
 
-import util.DBAccessor;
+import jdbc.util.DBAccessor;
 import java.sql.Connection;
 import com.mysql.jdbc.Statement;
 import java.io.IOException;

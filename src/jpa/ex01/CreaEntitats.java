@@ -1,4 +1,4 @@
-package jpa;
+package jpa.ex01;
 
 import java.util.ArrayList;
 import java.util.Date;
